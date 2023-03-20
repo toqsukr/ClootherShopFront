@@ -1,0 +1,77 @@
+#header_container {
+    background-color: #303030;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    z-index: 0;
+}
+
+#control_btn_group {
+    height: 40%;
+    width: 81px;
+    padding: 0 0 0 3px;
+    margin: 0 15px 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#circle_btn {
+    border-radius: 100%;
+    width: 18px;
+    height: 18px;
+    border: 0;
+    opacity: 0.7;
+    transition: opacity 0.3s, width 0.1s, height 0.1s, margin 0.1s;
+}
+
+#circle_btn:hover {
+    transition: opacity 0.3s, width 0.1s, height 0.1s, margin 0.1s;
+    opacity: 1;
+}
+
+#circle_btn:active {
+    width: 16px;
+    height: 16px;
+    margin: 1px 1px 1px 1px;
+    transition: width 0.1s, height 0.1s, margin 0.1s;
+}
+
+#contact_btn {
+    margin: 0 auto 0 auto;
+    width: 160px;
+    background-color: #565656;
+    color: white;
+    border: 0;
+}
+
+#menu_group {
+    width: 81px;
+    height: 85%;
+    margin: 0 auto 0 15px;
+    display: flex;
+    align-items: center;
+}
+
+.menu_img {
+    height: 35px;
+    width: 35px;
+    opacity: 0.7;
+    transition: opacity 0.3s, transform 0.5s;
+}
+
+.rotate {
+    transform: rotate(-90deg);
+    transition: transform 0.5s;
+}
+
+.menu_img:hover {
+    transition: opacity 0.3s, transform 0.5s;
+    opacity: 1;
+}
+
+#logo_text {
+    color: white;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
