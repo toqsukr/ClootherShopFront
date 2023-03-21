@@ -31,11 +31,13 @@
     opacity: 1;
 }
 
+
 #circle_btn:active {
     width: 16px;
     height: 16px;
     margin: 1px 1px 1px 1px;
-    transition: width 0.1s, height 0.1s, margin 0.1s;
+    transition: opacity 0.3s, width 0.1s, height 0.1s, margin 0.1s;
+    opacity: 1;
 }
 
 #contact_btn {
