@@ -1,0 +1,15 @@
+.profile_bar_container {
+    background-color: #252525;
+    width: 38%;
+    height: 250px;
+    max-width: 210px;
+    z-index: 50;
+    display: flex;
+    margin: -250px 0 0 auto;
+    transition: margin 0.4s;
+}
+
+.profile_bar_container_show {
+    margin: 0 0 0 auto;
+    transition: margin 0.4s;
+}

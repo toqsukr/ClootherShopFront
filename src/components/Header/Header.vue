@@ -1,10 +1,13 @@
 <script setup>
     import { ref } from "vue"
     import css from "./Header.module.css"
-    defineProps(['isSide'])
-    defineEmits(['changeSide'])
+    defineProps(['isSide', 'isProfile'])
+    const emit = defineEmits(['changeSide', 'changeProfile'])
 
     const login = ref(false)
+    const handleProfile = () => {
+        emit('changeProfile')
+    }
 </script>
 
 <template>
@@ -14,10 +17,10 @@
         </div>
         <h1 :id="css.logo_text">Logo</h1>
         <div :id="css.profile_container">
-            <div @click="login=!login" type="button" :id="css.profile_icon_container">
-                <img v-if="login" :id="css.profile_icon" src="https://img.icons8.com/fluency-systems-regular/200/FFE500/user.png" alt="profile" />
-                <img v-if="login" :id="css.profile_down" src="https://img.icons8.com/material/200/FFFFFF/sort-down--v1.png" alt="">
-                <img v-else src="https://img.icons8.com/material/200/FFE500/enter-2--v1.png" :id="css.profile_icon" alt="sign-in">
+            <div type="button" :id="css.profile_icon_container">
+                <img @click=handleProfile v-if="login" :id="css.profile_icon" src="https://img.icons8.com/fluency-systems-regular/200/FFE500/user.png" alt="profile" />
+                <img @click="login=!login" v-else src="https://img.icons8.com/material/200/FFE500/enter-2--v1.png" :id="css.profile_icon" alt="sign-in">
+                <img @click=handleProfile v-if="login" :class="{[css.profile_down]:true, [css.profile_down_show]: isProfile}" src="https://img.icons8.com/material/200/FFFFFF/sort-down--v1.png" alt="">
             </div>
         </div>
     </div>

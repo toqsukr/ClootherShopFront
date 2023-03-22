@@ -2,16 +2,19 @@
   import { ref } from "vue"
   import Header from './components/Header/Header.vue';
   import SidePanel from './components/SidePanel/SidePanel.vue';
+  import ProfileBar from "./components/ProfileBar/ProfileBar.vue";
 
   const isSide = ref(false)
+  const isProfile = ref(false)
 </script>
 
 <template>
-  <Header :isSide=isSide @change-side="() => isSide=!isSide" />
-    <div id="main-container">
-
-    </div>
-    <SidePanel :isSide=isSide />
+  <Header :isProfile=isProfile :isSide=isSide @change-profile="() => isProfile=!isProfile" @change-side="() => isSide=!isSide" />
+  <div id="main-container">
+    
+  </div>
+  <ProfileBar :isProfile=isProfile></ProfileBar>
+  <SidePanel :isSide=isSide />
 </template>
 
 <style>
