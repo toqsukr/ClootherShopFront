@@ -6,14 +6,15 @@
 
   const isSide = ref(false)
   const isProfile = ref(false)
+  const login = ref(false)
 </script>
 
 <template>
-  <Header :isProfile=isProfile :isSide=isSide @change-profile="() => isProfile=!isProfile" @change-side="() => isSide=!isSide" />
+  <Header :login="login" :isProfile=isProfile :isSide=isSide  @change-login="() => login=!login" @change-profile="() => isProfile=!isProfile" @change-side="() => isSide=!isSide" />
   <div id="main-container">
     
   </div>
-  <ProfileBar :isProfile=isProfile></ProfileBar>
+  <ProfileBar :isProfile=isProfile @change-login="() => login=!login" @change-profile="() => isProfile=!isProfile"></ProfileBar>
   <SidePanel :isSide=isSide />
 </template>
 

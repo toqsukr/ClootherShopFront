@@ -1,15 +1,37 @@
 .profile_bar_container {
-    background-color: #252525;
-    width: 38%;
-    height: 250px;
+    width: auto;
+    height: auto;
     max-width: 210px;
     z-index: 50;
     display: flex;
     margin: -250px 0 0 auto;
     transition: margin 0.4s;
+    display: flex;
+    flex-direction: column;
 }
 
 .profile_bar_container_show {
     margin: 0 0 0 auto;
     transition: margin 0.4s;
+}
+
+#profile_item {
+    color: #FFE500;
+    background-color: #252525;
+    text-align: center;
+    font-family: fantasy;
+    padding: 14px 4px 14px 4px;
+    margin: 0 0 0 0;
+    transition: opacity 0.3s;
+    opacity: 0.98;
+}
+
+#profile_item:hover {
+    transition: opacity 0.3s;
+    color:#f9eb52e7;
+    opacity: 1;
+}
+
+.border_round {
+    border-bottom-left-radius: 5px;
 }

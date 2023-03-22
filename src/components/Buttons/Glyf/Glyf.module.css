@@ -54,3 +54,7 @@
     font-family: fantasy;
 }
 
+.border_round {
+    border-bottom-right-radius: 5px;
+}
+
