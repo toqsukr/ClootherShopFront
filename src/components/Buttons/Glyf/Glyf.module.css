@@ -1,10 +1,8 @@
 #glyf_container {
-    background-color: #252525;
     display: flex;
     flex-direction:row;
     align-items: center;
     z-index: 10;
-    opacity: 0.8;
 }
 
 #glyf_container:hover {
@@ -13,19 +11,16 @@
     opacity: 1;
 }
 
-#glyf_text {
-    color: #FFE500;
-    border: 0;
-    width: 100%;
-    height: 65px;
-    background-color: #252525;
-}
-
 
 #glyf_img {
-    height: 45px;
-    width: 45px;
-    margin: 0 0 0 8%;
-    z-index: 0;
-    position: relative;
+    height: 55px;
+    width: 55px;
+    padding: 9px 10px 9px 10px;
+    background-color: #252525;
+    opacity: 0.98;
 }
+
+#glyf_img:hover {
+    opacity: 1;
+}
+

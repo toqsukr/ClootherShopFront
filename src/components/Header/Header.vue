@@ -12,9 +12,6 @@
         </div>
         <h1 :id="css.logo_text">Logo</h1>
         <div :id="css.control_btn_group">
-            <button :id="css.circle_btn" style="background-color: #1FFF43;"></button>
-            <button :id="css.circle_btn" style="background-color: #FBFF3E;"></button>
-            <button :id="css.circle_btn" style="background-color: #FF3030;"></button>
         </div>
     </div>
 </template>
