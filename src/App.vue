@@ -9,6 +9,7 @@
 <template>
   <Header :isSide=isSide @change-side="() => isSide=!isSide" />
     <div id="main-container">
+
     </div>
     <SidePanel :isSide=isSide />
 </template>

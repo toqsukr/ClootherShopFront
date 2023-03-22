@@ -9,14 +9,50 @@
     z-index: 0;
 }
 
-#control_btn_group {
-    height: 40%;
-    width: 81px;
-    padding: 0 0 0 3px;
+#profile_container {
+    height: 85%;
+    width: 25%;
     margin: 0 15px 0 auto;
     display: flex;
     align-items: center;
-    gap: 10px;
+}
+#profile_icon {
+    width: 35px;
+    height: 35px;
+    margin: 0 0 0 0;
+    position: relative;
+    z-index: 2;
+}
+
+#profile_icon_container {
+    width: 35px;
+    height: 35px;
+    margin: 0 0 0 auto;
+    position: relative;
+    transition: opacity 0.3s;
+    opacity: 0.7;
+}
+
+#profile_icon_container:hover {
+    transition: opacity 0.3s;
+    opacity: 1;
+}
+
+#profile_down {
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    bottom: -8px;
+    right: -7px;
+
+    z-index: 1;
+}
+
+
+#profile_text {
+    color:white;
+    margin: 0 0 0 0;
+    font-family: fantasy;
 }
 
 #circle_btn {
@@ -51,7 +87,7 @@
 }
 
 #menu_group {
-    width: 81px;
+    width: 25%;
     height: 85%;
     margin: 0 auto 0 15px;
     display: flex;
