@@ -7,7 +7,6 @@
     position: fixed;
     top: 60px;
     z-index: 50;
-    border-bottom-right-radius: 2%;
 }
 
 .side_box_hidden {
@@ -20,10 +19,4 @@
     transition: margin 0.4s;
 }
 
-#glyf_hint {
-    width: auto;
-    height: auto;
-    color: #FFE500;
-    margin: 10px 16px 0 10px; 
-}
 
