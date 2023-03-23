@@ -7,8 +7,8 @@
 
     const handleLogout = (index) => {
         if(index === profileItems.length - 1) {
-            emit('changeLogin')
             emit('changeProfile')
+            emit('changeLogin')
         } 
     }
 

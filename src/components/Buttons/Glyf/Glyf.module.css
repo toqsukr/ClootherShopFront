@@ -28,13 +28,13 @@
     padding: 9px 9px 9px 9px;
     opacity: 1;
     z-index: 1;    
-    transition: margin 0.3s;
+    transition: margin 0.4s;
 
 }
 
 #glyf_img:hover {
     margin: 0 0 0 -66px;
-    transition: margin 0.3s;
+    transition: margin 0.4s;
 }
 
 
@@ -47,12 +47,12 @@
     border-bottom-right-radius: 8px;
     margin: 0 0 0 -200px;
     z-index: 2;
-    transition: margin 0.3s;
+    transition: margin 0.4s;
 }
 
 .glyf_hint_show {
     margin: 0 0 0 -66px;
-    transition: margin 0.3s;
+    transition: margin 0.4s;
 }
 
 

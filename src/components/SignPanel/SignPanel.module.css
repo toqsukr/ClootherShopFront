@@ -1,24 +1,35 @@
-#sign_main_container {
+.sign_main_container {
     width: 100%;
     height: 100%;
     background-color: #25252575;
     display: flex;
     position: fixed;
     top: 0;
+    z-index: -1;
     text-align: center;
-    z-index: 52;
     align-items: center;
     justify-content: center;
+    transition: width 0.4s, height 0.4s, opacity 0.6s;
+    opacity: 0;
+}
+
+.window_container_appearance {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    opacity: 1;
+    transition: width 0.4s, height 0.4s, opacity 0.6s;
+    z-index: 52;
 }
 
 .sign_window_container {
-    width: 0;
+    width: 40%;
     height: 0;
-    min-width: 250px;
-    max-width: 400px;
-    min-height: 320px;
     display: flex;
     background-color: #252525;
+    min-width: 300px;
+    max-height: 320px;
+    max-width: 400px;
     border-radius: 7px;
     justify-content: end;
     transition: width 0.5s, height 0.5s;
@@ -27,8 +38,11 @@
 .window_appearance {
     width: 40%;
     height: 40%;
+    min-width: 300px;
+    max-width: 400px;
     transition: width 0.5s, height 0.5s;
 }
+
 
 #sign_close_img {
     width: 30px;
