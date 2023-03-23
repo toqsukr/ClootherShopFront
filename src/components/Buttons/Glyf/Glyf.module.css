@@ -1,6 +1,6 @@
 #glyf_container {
-    max-width: 150px;
-    max-height: 66px;
+    width: 66px;
+    height: 66px;
     display: flex;
     flex-direction:row;
     align-items: center;
@@ -15,14 +15,26 @@
     opacity: 1;
 }
 
-
-#glyf_img {
+#glyf_img_container {
     height: 66px;
     width: 66px;
-    padding: 9px 10px 9px 10px;
+    display:flex;
     background-color: #252525;
+}
+
+#glyf_img {
+    height: auto;
+    width: auto;
+    padding: 9px 9px 9px 9px;
     opacity: 1;
     z-index: 1;    
+    transition: margin 0.3s;
+
+}
+
+#glyf_img:hover {
+    margin: 0 0 0 -66px;
+    transition: margin 0.3s;
 }
 
 
@@ -32,15 +44,14 @@
     color: #FFE500;
     background-color: #252525;
     border: 1px solid #252525;
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px;
-    margin: 0 0 0 -134px;
-    z-index: 0;
+    border-bottom-right-radius: 8px;
+    margin: 0 0 0 -200px;
+    z-index: 2;
     transition: margin 0.3s;
 }
 
 .glyf_hint_show {
-    margin: 0 0 0 0;
+    margin: 0 0 0 -66px;
     transition: margin 0.3s;
 }
 
@@ -54,7 +65,13 @@
     font-family: fantasy;
 }
 
-.border_round {
-    border-bottom-right-radius: 5px;
+
+.top_right_border_round {
+    border-top-right-radius: 8px;
+}
+
+
+.bottom_right_border_round {
+    border-bottom-right-radius: 8px;
 }
 
