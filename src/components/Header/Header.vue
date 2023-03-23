@@ -1,5 +1,4 @@
 <script setup>
-    import { ref } from "vue"
     import css from "./Header.module.css"
     defineProps(['isSide', 'isProfile', 'login'])
     const emit = defineEmits(['changeSide', 'changeProfile', 'changeLogin'])
@@ -7,6 +6,7 @@
     const handleProfile = () => {
         emit('changeProfile')
     }
+
 </script>
 
 <template>

@@ -7,12 +7,16 @@
   const isSide = ref(false)
   const isProfile = ref(false)
   const login = ref(false)
+
+  const hideProfile = () => {
+    if(isProfile.value)  isProfile.value = !isProfile.value;
+  }
 </script>
 
 <template>
   <Header :login="login" :isProfile=isProfile :isSide=isSide  @change-login="() => login=!login" @change-profile="() => isProfile=!isProfile" @change-side="() => isSide=!isSide" />
-  <div id="main-container">
-    
+  <div @click="hideProfile" id="main-container">
+      <h1 v-for="i in 30">:DDD</h1>
   </div>
   <ProfileBar :isProfile=isProfile @change-login="() => login=!login" @change-profile="() => isProfile=!isProfile"></ProfileBar>
   <SidePanel :isSide=isSide />
