@@ -18,7 +18,6 @@
 <template>
   <Header :login=login :isProfile=isProfile :isSide=isSide @change-window="() => showWindow=!showWindow"  @change-login="() => login=!login" @change-profile="() => isProfile=!isProfile" @change-side="() => isSide=!isSide" />
   <div @click="hideProfile" id="main-container">
-    <h1>fds</h1>
   </div>
   <SignPanel v-if="!login" :showWindow="showWindow" @change-window="() => showWindow=!showWindow"></SignPanel>
   <ProfileBar :isProfile=isProfile @change-login="() => login=!login" @change-profile="() => isProfile=!isProfile"></ProfileBar>
