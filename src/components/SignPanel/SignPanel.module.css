@@ -1,27 +1,28 @@
-.sign_main_container {
+#sign_main_container {
     width: 100%;
     height: 100%;
     background-color: #25252575;
     display: flex;
     position: fixed;
     top: 0;
-    z-index: -1;
+    z-index: 20;
     align-items: center;
     justify-content: center;
-    transition: opacity 0.4s;
+    opacity: 1;
+}
+
+.window_appearance-enter-active,
+.window_appearance-leave-active {
+    transition: opacity 0.5s;
+}
+
+.window_appearance-enter-from,
+.window_appearance-leave-to {
     opacity: 0;
 }
 
-.window_container_appearance {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    opacity: 1;
-    transition: opacity 0.4s;
-    z-index: 52;
-}
 
-.sign_window_container {
+#sign_window_container {
     width: 40%;
     height: 0;
     display: block;
@@ -31,16 +32,8 @@
     max-height: 320px;
     max-width: 380px;
     border-radius: 7px;
-    transition: width 0.5s, height 0.5s;
 }
 
-.window_appearance {
-    width: 40%;
-    height: 40%;
-    min-width: 320px;
-    max-width: 380px;
-    transition: width 0.5s, height 0.5s;
-}
 
 #window_header {
     width: 100%;
