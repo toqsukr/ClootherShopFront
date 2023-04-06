@@ -1,5 +1,4 @@
 <script setup>
-    import { Transition } from "vue";
     import css from "./SignPanel.module.css"
 
     defineProps(['showWindow', 'login'])
@@ -8,8 +7,8 @@
 </script>
 
 <template>
-    <div @click="$emit('changeWindow')" :id="css.sign_main_container">
-        <div @click="$emit('changeWindow')" :id="css.sign_window_container">
+    <div :id="css.sign_main_container">
+        <div :id="css.sign_window_container">
             <div :id="css.window_header" >
                 <img @click="$emit('changeWindow')" type="button" :id="css.sign_close_img" src="https://img.icons8.com/material/200/FFE500/multiply--v1.png" alt="">
             </div>

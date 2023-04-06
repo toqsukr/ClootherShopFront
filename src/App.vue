@@ -20,6 +20,9 @@
   <Header :login=login :isProfile=isProfile :isSide=isSide :showWindow=showWindow @change-window="() => showWindow=!showWindow"  @change-login="() => login=!login" @change-profile="() => isProfile=!isProfile" @change-side="() => isSide=!isSide" />
   <div @click="hideProfile" id="main-container">
   </div>
+  <Transition name="sign-background-appearance">
+    <div @click="showWindow=!showWindow" v-if="!login && showWindow" id="sign-background"></div>
+  </Transition>
   <Transition name="sign-appearance">
     <SignPanel v-if="!login && showWindow" :login="login" :showWindow="showWindow" @change-window="() => showWindow=!showWindow"></SignPanel>
   </Transition>
@@ -43,6 +46,30 @@
     width: auto;
   }
 
+  #sign-background {
+    width: 100%;
+    height: 100%;
+    background-color: #25252575;
+    display: flex;
+    position: fixed;
+    top: 0;
+  }
+
+  .sign-background-appearance-enter-from,
+  .sign-background-appearance-leave-to {
+    opacity: 0;
+  }
+
+  .sign-background-appearance-enter-active,
+  .sign-background-appearance-leave-active {
+    transition: opacity 0.5s;
+  }
+
+  .sign-background-appearance-enter-to,
+  .sign-background-appearance-leave-from {
+    opacity: 1;
+  }
+
   .sign-appearance-enter-from,
   .sign-appearance-leave-to {
     opacity: 0;
@@ -51,7 +78,7 @@
 
   .sign-appearance-enter-active,
   .sign-appearance-leave-active {
-      transition: all 0.6s;
+      transition: all 0.5s;
   }
 
   .sign-appearance-enter-to,
@@ -70,15 +97,13 @@
     transition: transform 0.4s;
   }
 
-  .sidepanel-slide-enter-to,
-  .sidepanel-slide-leave-from {
+  .profile-slide-enter-from,
+  .profile-slide-leave-to {
     transform: translateY(-210px);
   }
-
 
   .profile-slide-enter-active,
   .profile-slide-leave-active {
     transition: transform 0.4s;
   }
-
 </style>

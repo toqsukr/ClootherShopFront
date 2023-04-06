@@ -1,11 +1,9 @@
 #sign_main_container {
     width: 100%;
     height: 100%;
-    background-color: #25252575;
     display: flex;
     position: fixed;
     top: 0;
-    z-index: 20;
     align-items: center;
     justify-content: center;
 }
@@ -21,6 +19,7 @@
     max-height: 320px;
     max-width: 380px;
     border-radius: 7px;
+    z-index: 20;
 }
 
 
