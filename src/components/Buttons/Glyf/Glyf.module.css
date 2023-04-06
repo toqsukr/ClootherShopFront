@@ -37,38 +37,14 @@
     transition: margin 0.4s;
 }
 
-
-.glyf_hint {
-    width: 134px;
-    height: 66px;
-    color: #FFE500;
-    background-color: #252525;
-    border: 1px solid #252525;
-    border-bottom-right-radius: 8px;
-    margin: 0 0 0 -200px;
-    z-index: 2;
-    transition: margin 0.4s;
-}
-
-.glyf_hint_show {
-    margin: 0 0 0 -66px;
-    transition: margin 0.4s;
-}
-
-
 #glyf_text {
     width: 134px;
     height: 66px; 
     margin: 0 0 0 0;
     display: grid;
     align-items: center;
+    opacity: 1;
 }
-
-
-.top_right_border_round {
-    border-top-right-radius: 8px;
-}
-
 
 .bottom_right_border_round {
     border-bottom-right-radius: 8px;

@@ -16,7 +16,7 @@
 
 <template>
     <div :id="css.profile_main_container">
-        <div :class="{[css.profile_bar_container]: true, [css.profile_bar_container_show]: isProfile}">
+        <div :id="css.profile_bar_container">
             <h6 @click=handleLogout(index) :type="index == 0 ? 'span' : 'button'" :class="{[css.border_round]: index === profileItems.length - 1}" :id="css.profile_item" v-for="(item, index) in profileItems" :key="index">{{ item }}</h6>
         </div>
     </div>

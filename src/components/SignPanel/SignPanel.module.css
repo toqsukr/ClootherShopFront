@@ -8,17 +8,6 @@
     z-index: 20;
     align-items: center;
     justify-content: center;
-    opacity: 1;
-}
-
-.window_appearance-enter-active,
-.window_appearance-leave-active {
-    transition: opacity 0.5s;
-}
-
-.window_appearance-enter-from,
-.window_appearance-leave-to {
-    opacity: 0;
 }
 
 

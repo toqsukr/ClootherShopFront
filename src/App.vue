@@ -1,5 +1,6 @@
 <script setup>
   import { ref } from "vue"
+  import { Transition } from "vue";
   import Header from './components/Header/Header.vue';
   import SidePanel from './components/SidePanel/SidePanel.vue';
   import ProfileBar from "./components/ProfileBar/ProfileBar.vue";
@@ -16,12 +17,18 @@
 </script>
 
 <template>
-  <Header :login=login :isProfile=isProfile :isSide=isSide @change-window="() => showWindow=!showWindow"  @change-login="() => login=!login" @change-profile="() => isProfile=!isProfile" @change-side="() => isSide=!isSide" />
+  <Header :login=login :isProfile=isProfile :isSide=isSide :showWindow=showWindow @change-window="() => showWindow=!showWindow"  @change-login="() => login=!login" @change-profile="() => isProfile=!isProfile" @change-side="() => isSide=!isSide" />
   <div @click="hideProfile" id="main-container">
   </div>
-  <SignPanel :login="login" :showWindow="showWindow" @change-window="() => showWindow=!showWindow"></SignPanel>
-  <ProfileBar :isProfile=isProfile @change-login="() => login=!login" @change-profile="() => isProfile=!isProfile"></ProfileBar>
-  <SidePanel :isSide=isSide />
+  <Transition name="sign-appearance">
+    <SignPanel v-if="!login && showWindow" :login="login" :showWindow="showWindow" @change-window="() => showWindow=!showWindow"></SignPanel>
+  </Transition>
+  <Transition name="profile-slide">
+    <ProfileBar v-if="isProfile" :isProfile=isProfile @change-login="() => login=!login" @change-profile="() => isProfile=!isProfile"></ProfileBar>
+  </Transition>
+  <Transition name="sidepanel-slide">
+    <SidePanel v-if="isSide" :isSide=isSide />
+  </Transition>
 </template>
 
 <style>
@@ -35,4 +42,43 @@
     height: auto;
     width: auto;
   }
+
+  .sign-appearance-enter-from,
+  .sign-appearance-leave-to {
+    opacity: 0;
+    transform: scale(0);
+  }
+
+  .sign-appearance-enter-active,
+  .sign-appearance-leave-active {
+      transition: all 0.6s;
+  }
+
+  .sign-appearance-enter-to,
+  .sign-appearance-leave-from {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  .sidepanel-slide-enter-from,
+  .sidepanel-slide-leave-to {
+    transform: translateX(-66px);
+  }
+
+  .sidepanel-slide-enter-active,
+  .sidepanel-slide-leave-active {
+    transition: transform 0.4s;
+  }
+
+  .sidepanel-slide-enter-to,
+  .sidepanel-slide-leave-from {
+    transform: translateY(-210px);
+  }
+
+
+  .profile-slide-enter-active,
+  .profile-slide-leave-active {
+    transition: transform 0.4s;
+  }
+
 </style>
