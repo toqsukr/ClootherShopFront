@@ -22,7 +22,7 @@
     background-color: #252525;
 }
 
-#glyf_img {
+.glyf_img {
     height: auto;
     width: auto;
     padding: 9px 9px 9px 9px;
@@ -32,10 +32,47 @@
 
 }
 
-#glyf_img:hover {
+.glyf_img:hover {
     margin: 0 0 0 -66px;
     transition: margin 0.4s;
 }
+
+.glyf_img_shopping_bag {
+    height: 66px;
+    width: 66px;
+}
+
+.glyf_img_shopping_basket {
+    height: 66px;
+    width: 66px;
+}
+
+.glyf_img_favorite {
+    height: 66px;
+    width: 66px;
+}
+
+.glyf_img_contacts {
+    height: 66px;
+    width: 66px;
+}
+
+.glyf_img_shopping_bag::before {
+    content: url("/shopping-bag.svg");
+}
+
+.glyf_img_shopping_basket::before {
+    content: url("/shopping-basket.svg");
+}
+
+.glyf_img_favorite::before {
+    content: url("/favorite.svg");
+}
+
+.glyf_img_contacts::before {
+    content: url("/contacts.svg");
+}
+
 
 #glyf_text {
     width: 134px;

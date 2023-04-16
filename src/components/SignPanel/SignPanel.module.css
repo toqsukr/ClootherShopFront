@@ -38,6 +38,10 @@
     margin: 0 0 0 auto;
 }
 
+#sign_close_img::before {
+    content: url("/close.svg");
+}
+
 #sign_close_img:hover {
     transition: 0.3s;
     opacity: 1;

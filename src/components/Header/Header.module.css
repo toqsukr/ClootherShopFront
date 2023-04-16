@@ -24,6 +24,22 @@
     z-index: 1;
 }
 
+#profile_icon::before {
+    content: url("/user.svg");
+}
+
+#sign_in_icon {
+    width: 35px;
+    height: 35px;
+    margin: 0 0 0 0;
+    position: relative;
+    z-index: 1;
+}
+
+#sign_in_icon::before {
+    content: url("/sign-in.svg");
+}
+
 #profile_icon_container {
     width: 35px;
     height: 35px;
@@ -42,22 +58,26 @@
     width: 25px;
     height: 25px;
     position: absolute;
-    bottom: -8px;
-    right: -7px;
+    bottom: -9px; 
+    right: -8px;
     z-index: 1;
     transition: transform 0.5s, opacity 0.4s;
-    transform: rotateX(-0.5turn);
+    transform: rotateX(0);
     opacity: 0;
+}
+
+.profile_down::before {
+    content: url("/sort-down.svg");
 }
 
 .profile_down_show {
     transition: transform 0.5s, opacity 0.4s;
-    transform: rotateX(0);
-    opacity: 0.7;
+    transform: rotateX(-0.5turn);
+    opacity: 1;
 }
 
 #profile_text {
-    color:white;
+    color: white;
     margin: 0 0 0 0;
 }
 
@@ -74,7 +94,6 @@
     transition: opacity 0.3s, width 0.1s, height 0.1s, margin 0.1s;
     opacity: 1;
 }
-
 
 #circle_btn:active {
     width: 16px;
@@ -105,6 +124,10 @@
     width: 35px;
     opacity: 0.7;
     transition: opacity 0.3s, transform 0.5s;
+}
+
+.menu_img::before {
+    content: url("/menu.svg");
 }
 
 .rotate {
